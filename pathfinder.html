@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+/* *{
+    margin: none;
+    padding: none;
+    
+    box-sizing: border-box;
+} */
+        body{
+            overflow: hidden;
+            display: flex;
+            /* justify-content: center; */
+            
+            align-items: center;
+            flex-direction: column;
+            width: 100vw;
+            max-width: 2000px;
+            max-height: 1000px;
+            height: 100vh;
+            margin: none;
+            background-color: rgb(2, 56, 56);
+            padding: none;
+            /* padding: ; */
+        }
+
+        header{
+            width:100%;
+            background-color: rgb(2, 56, 56);
+            min-height: 100px;
+            height: 120px;
+            /* height: auto; */
+            box-sizing: border-box;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            color:rgb(250, 249, 249);
+            padding:5px
+        }
+.start,.end{
+    position: relative;
+    margin: 12px
+}
+        .start::before  , .end::before{
+            content: "";
+            position: absolute;
+            left:-13px;
+            top:7px;
+            background-color: red;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+
+        }
+ @keyframes blink {
+
+            0%{
+                background-color: rgba(31, 241, 66, 0.4);
+            }
+            100%{
+                background-color: white
+            }
+            
+        }
+        .reset{
+          
+            position: relative;
+            background-color: white;
+            animation: blink 1s  1s infinite ease-in-out
+
+        }
+
+        .reset::before{
+            content: "|>double click to reset maze";
+            position: absolute;
+            top :-17px;
+            width:200px;
+            left: -50%;
+            color:white
+        }
+
+       
+
+        .end::before{
+            background-color: purple;
+        }
+.active{
+    background-color: rgba(3, 168, 168, 0.5) ;
+    color:white;
+    box-shadow: inset 0.9px 0.9px red;
+}
+        footer{
+            width:100%;
+            background-color: rgb(2, 56, 56);
+            min-height: 100px;
+            height: 30px;
+            /* height: auto; */
+            box-sizing: border-box;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            color:rgb(250, 249, 249);
+            padding:5px;
+            position: absolute;
+            bottom: 0px;
+        }
+    </style>
+
+
+</head>
+<body>
+    <header>
+        <h2>Path Finder</h2>
+        <div>
+            <button class="startt">start</button>
+            <button class="reset">reset</button>
+            <button class="startonchange">start on change</button>
+           <span>
+              
+               <span class="start"> start</span>
+         
+               <span class="end"> end</span>
+           </span>  
+           <span>
+               distance <span class="distance">  .....</span>
+           </span>
+           <span style="color:red ;margin-left: 20px; font-size: 15px;"class="err"> </span>
+        </div>
+        <hr>
+    </header>
+    <!-- rgb(2, 56, 56) -->
+    <canvas style="background-color:rgb(2, 56, 56);"></canvas>
+
+    <footer>
+        <hr>
+      <p>  &copy; Copyright reserved. A Yema Tech Algorithm</p>
+        <P>Contact: princewillasotibe123@gmail.com</P>
+    </footer>
+    <script src="pathfindder.js"></script>
+</body>
+</html>
